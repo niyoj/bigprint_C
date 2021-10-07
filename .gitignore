@@ -1,0 +1,10 @@
+# Ignoring executable files
+*.out
+*.exe
+
+# Ignoring main file used for experimentation
+main.c
+
+# Excluding exectuable files inside ./bin from being ignored
+!bin/*.out
+!bin/*.exe
