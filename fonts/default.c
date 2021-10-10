@@ -313,4 +313,5 @@ char Z[][13] ={
     {"88888888888\0"}
 };
 
+char SPACE[] = {"        \0"};
 // Definition section for letters ends here

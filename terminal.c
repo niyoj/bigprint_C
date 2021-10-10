@@ -65,6 +65,8 @@ void print_row(char c, int n) {
         printf("%s  ", Y[n]);
     } else if ( c == 'Z') {
         printf("%s  ", Z[n]);
+    } else if( c == ' ') {
+        printf("%s", SPACE);  
     } else {
         printf("\nAn unexpected error occured. Please check whether the string consists of legal set of characters or not i.e. from A to Z only.\n");
     }
