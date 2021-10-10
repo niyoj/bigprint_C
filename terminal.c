@@ -9,80 +9,7 @@
 #include <stdio.h>              //is used for basic I/O operations
 #include <string.h>             //is used for executing some operations with strings
 
-// Definition of the letters (A to Z) as arrays starts from here
-char A[][10] = {
-    {"888888888\0"},
-    {"88     88\0"},
-    {"88     88\0"},
-    {"88     88\0"},
-    {"888888888\0"},
-    {"88     88\0"},
-    {"88     88\0"},
-    {"88     88\0"},
-    {"88     88\0"}
-};
-
-char B[][10] = {
-    {"88888888 \0"},
-    {"88    888\0"},
-    {"88     88\0"},
-    {"88    888\0"},
-    {"88888888 \0"},
-    {"88    888\0"},
-    {"88     88\0"},
-    {"88    888\0"},
-    {"88888888 \0"}
-};
-
-char C[][10] = {
-    {"888888888\0"},
-    {"88     88\0"},
-    {"88       \0"},
-    {"88       \0"},
-    {"88       \0"},
-    {"88       \0"},
-    {"88       \0"},
-    {"88     88\0"},
-    {"888888888\0"}
-};
-
-char D[][10] = {
-    {"888888   \0"},
-    {"88   88  \0"},
-    {"88    88 \0"},
-    {"88     88\0"},
-    {"88     88\0"},
-    {"88     88\0"},
-    {"88    88 \0"},
-    {"88   88  \0"},
-    {"888888   \0"}
-};
-
-
-char E[][10] = {
-    {"888888888\0"},
-    {"88       \0"},
-    {"88       \0"},
-    {"88       \0"},
-    {"88888888 \0"},
-    {"88       \0"},
-    {"88       \0"},
-    {"88       \0"},
-    {"888888888\0"}
-};
-
-char F[][10] = {
-    {"88888888\0"},
-    {"88      \0"},
-    {"88      \0"},
-    {"88      \0"},
-    {"8888888 \0"},
-    {"88      \0"},
-    {"88      \0"},
-    {"88      \0"},
-    {"88      \0"}
-};
-// Definition section for letters ends here
+#include "./fonts/default.c"
 
 //function `print_row()` is used by the function `terminal_print()` to print the character row by row
 void print_row(char c, int n) {
@@ -98,6 +25,48 @@ void print_row(char c, int n) {
         printf("%s  ", E[n]);
     } else if ( c == 'F') {
         printf("%s  ", F[n]);
+    } else if ( c == 'G') {
+        printf("%s  ", G[n]);
+    } else if ( c == 'H') {
+        printf("%s  ", H[n]);
+    } else if ( c == 'I') {
+        printf("%s  ", I[n]);
+    } else if ( c == 'J') {
+        printf("%s  ", J[n]);
+    } else if ( c == 'K') {
+        printf("%s  ", K[n]);
+    } else if ( c == 'L') {
+        printf("%s  ", L[n]);
+    } else if ( c == 'M') {
+        printf("%s  ", M[n]);
+    } else if ( c == 'N') {
+        printf("%s  ", N[n]);
+    } else if ( c == 'O') {
+        printf("%s  ", O[n]);
+    } else if ( c == 'P') {
+        printf("%s  ", P[n]);
+    } else if ( c == 'Q') {
+        printf("%s  ", Q[n]);
+    } else if ( c == 'R') {
+        printf("%s  ", R[n]);
+    } else if ( c == 'S') {
+        printf("%s  ", S[n]);
+    } else if ( c == 'T') {
+        printf("%s  ", T[n]);
+    } else if ( c == 'U') {
+        printf("%s  ", U[n]);
+    } else if ( c == 'V') {
+        printf("%s  ", V[n]);
+    } else if ( c == 'W') {
+        printf("%s  ", W[n]);
+    } else if ( c == 'X') {
+        printf("%s  ", X[n]);
+    } else if ( c == 'Y') {
+        printf("%s  ", Y[n]);
+    } else if ( c == 'Z') {
+        printf("%s  ", Z[n]);
+    } else {
+        printf("\nAn unexpected error occured. Please check whether the string consists of legal set of characters or not i.e. from A to Z only.\n");
     }
 }
 
@@ -106,7 +75,7 @@ void print_row(char c, int n) {
 int terminal_print(char str[]) {
     char len = strlen(str);                 //determining the length of characters
 
-    for (int i=0; i<9; i++) {               //start looping for 1 to 9th row of the array
+    for (int i=0; i<MAX_ROW; i++) {               //start looping for 1 to 9th row of the array
         for(int j=0; j<len; j++) {          //start looping for each character given
             char c = str[j];
             print_row(c, i);                //prints the nth row of the character                

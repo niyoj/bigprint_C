@@ -12,7 +12,6 @@ The main objectives of the project are;
 In this repo, you can see the file hierarchy as shown below;
 ```
 .
-├── bin
 ├── docs
 ├── .gitignore
 ├── README.md
@@ -21,7 +20,6 @@ In this repo, you can see the file hierarchy as shown below;
 ```
 
 and explaining about the filesystem of the project;
-- **bin** : It contains all the executable files if you want to test the program.
 - **docs** : Consists the documentation, guides and examples for the project. It also contains some images that are used in the project.
 - **README.md** : Contains the basic insturctions for the project, contributing guideliness etc.
 - **terminal.c** : It is the main C file that contains all the necessary function for implmentation of the project.
